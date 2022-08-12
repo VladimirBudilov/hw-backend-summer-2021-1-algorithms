@@ -28,8 +28,8 @@ class Graph:
         self._root = root
 
     def dfs(self) -> list[Node]:
-        vis = []  # a b
-        stek = []  # b c f
+        vis = []
+        stek = []
         vis.append(self._root)
         stek += self._root.outbound
         while len(stek) != 0:
@@ -42,8 +42,8 @@ class Graph:
         return vis
 
     def bfs(self) -> list[Node]:
-        visited = []  # a b
-        queue = []  # b c d
+        visited = []
+        queue = []
         visited.append(self._root)
         queue += self._root.outbound
         while len(queue) != 0:
